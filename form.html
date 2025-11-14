@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="public\assets\css\static.css">
+</head>
+
+<body>
+    
+
+    <header>
+        <h1>Candidate Details</h1>
+    </header>
+    <section>
+        <div class="formmod">
+        <form name="myform" onsubmit="return validateform()">
+            <div class="form-row">
+            <label for="pname">Name </label>
+            <input type="text" name="pname"><br><br></div>
+            <div class="form-row">
+            <label for="email">Email </label>
+            <input type="email" name="pemail"><br><br></div>
+            <div class="form-row">
+            <label for="phonenum">PhoneNumber </label>
+            <input type="text" name="pphonenum"><br><br></div>
+            <div class="form-row">
+            <label for="qualification">Qualification </label>
+            <input type="text" name="pqual"><br><br></div>
+            <div class="form-row">
+            <label for="experience">Years of Experience </label>
+            <input type="text" name="pexp"><br><br></div>
+            <div class="buttoncenter">
+            <input type="submit" value="Submit" class="button1">
+            </div>
+        </form>
+        </div>
+    </section>
+    <footer>
+        <h4>Copyrights All rights reserved</h4>
+    </footer>
+    <script>
+        function validateform(){
+            let name= document.forms["myform"]["pname"].value;
+            let email = document.forms["myform"]["pemail"].value;
+            let phonenum = document.forms["myform"]["pphonenum"].value;
+            let qual = document.forms["myform"]["pqual"].value;
+            let exp = document.forms["myform"]["pexp"].value;
+            if(name==""){
+                alert("Name must be filled out")
+                return false;
+            }
+            if(email==""){
+                alert("Email must be filled out")
+                return false;
+            }
+            if(phonenum=="")
+            {
+                alert("Phone Number is needed")
+                return false;
+            }
+            if(qual=="")
+            {
+                alert("Qualification should be needed")
+                return false;
+            }
+            if(exp==""){
+                alert("Years of experience must be filled out")
+                return false;
+            }
+        }
+    </script>
+</body>
+
+</html>
